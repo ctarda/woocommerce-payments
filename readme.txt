@@ -99,6 +99,7 @@ Please note that our support for the checkout block is still experimental and th
 == Changelog ==
 
 = 3.0.0 - 2021-xx-xx =
+* Fix - Filter out merchant-facing payment errors from customer error notices.
 
 = 2.9.0 - 2021-08-25 =
 * Add - Split discount line in timeline into variable fee and fixed fee.
