@@ -35,18 +35,25 @@ class WC_REST_Payments_Locations_Controller extends WC_Payments_REST_Controller 
 	}
 
 	/**
-	 * Get account details via API.
+	 * Get reader location via API.
 	 *
 	 * @param WP_REST_Request $request Request object.
 	 *
 	 * @return WP_REST_Response|WP_Error
 	 */
 	public function get_location_data( $request ) {
-		$location = [
-					'id' 			=> 'tml_ESCNWwpwlfv5JB',
-					'display_name'	=> 'Hotel Plaza',
-					];
+		return rest_ensure_response(
+			[
+				'id' 			=> 'tml_ESCNWwpwlfv5JB',
+				'display_name'	=> 'Hotel Plaza',
+			];
+		);
+	}
 
-		return rest_ensure_response( $location );
+		/**
+	 * Verify access.
+	 */
+	public function check_permission() {
+		return true;
 	}
 }
